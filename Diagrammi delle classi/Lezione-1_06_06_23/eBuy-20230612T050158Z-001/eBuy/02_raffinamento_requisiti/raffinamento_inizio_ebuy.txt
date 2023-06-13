@@ -1,0 +1,118 @@
+1. Requisiti sugli utenti. Degli utenti interessa:
+	1.1 nome utente 
+  	1.2 data di registrazione
+  	1.3 tipologia utente:
+		1.3.1 utente privato
+    	1.3.2 utente professionale:
+			1.3.2.1 URL sito web
+
+
+2. Requisiti sui post. Dei post interessa:
+
+ 	2.1. Tipologia:
+    		2.1.1 Asta. Dei post di tipo "asta" interessa:
+      		2.1.1.1 Prezzo base
+			2.1.1.2 Ammontare rialzo
+			2.1.1.3 Istante di scadenza
+			2.1.1.4 Bid (v. req. 3)
+			2.1.1.5 Oggetto in vendita
+
+    2.1.2 Compralo subito. Dei post di tipo "compralo subito" interessa:
+      		2.1.2.1 Prezzo di vendita 
+      		2.1.2.2 Eventuale utente acquirente
+
+  	2.2 Descrizione
+  	2.3 Categoria
+  	2.4 i metodi di pagamento accettati
+    	2.4.1 bonifico
+    	2.4.2 carta di credito
+  	2.5 Condizioni: nuovo o usato
+		2.5.1 Nuovo:
+			2.5.1.1 Garanzia (informazione mantenuta dal sistema)
+		2.5.2 Usato: 
+			2.5.2.1 Garanzia (informazione mantenuta dal sistema) FACOLTATIVA
+			2.5.2.2 Condizioni ogg.:
+				2.5.2.2.1 Ottimo
+				2.5.2.2.2 buono
+				2.5.2.2.3 discreto
+				2.5.2.2.4 da sistemare
+
+  	2.6 Utente venditore (v. req. 1)
+
+
+3. Requisiti sui bid:
+	3.1 post di tipolgia asta (v. req. 2.1.1)
+  	3.2 istante in cui è stato proposto
+  	3.3 l'utente privato bidder (v. req. 1.3.1)
+
+
+4. Requisiti sulla Popolarità venditori professionisti:
+	4.1 Articoli messi in vendita in modalita Asta:
+		4.1.1 Numero bid negli ultimi 12 mesi per un articolo 
+	4.2 Articoli messi in vendita in modalita "Compralo subito"
+		4.2.1 Acquisto negli utlimi 12 mesi per un articolo
+
+	4.3 Popolarità tipo:
+		4.3.1 Bassa se req. 4.1.1 o 4.2.1 < 50
+		4.3.2 Media se req. 4.1.1 o 4.2.1 > 50 and req. 4.1.1 o 4.2.1 < 300
+		4.3.4 Alta se req 4.1.1. o 4.2.1 > 300 
+
+
+5. Giudizio d'acquisto utente :
+	5.1 Giudizio sulla transazione e sulla soddisfazione:
+		5.1.1 feedback numerico da 0(non soddisfatto) a 5(molto soddisfatto)
+		5.1.2 commento testuale
+	
+
+99. Funzionalità del sistema
+
+	99.1 Da offrire agli utenti registrati:
+      		99.1.1 Pubblicare un post:
+				99.1.1.1 In modalità asta
+				99.1.1.2 In modalità Compralo Subito
+
+    		99.1.2 Gestire un'asta al rialzo:
+				99.1.2.1 Chiusura asta automatica:
+						99.1.2.1.1 Data/Ora specificata dal venditore (v. req. 2.1.1.3)
+
+				99.1.2.2 Vincitore asta: 
+						99.1.2.2.1 Ultimo utente che ha effetuato un bid, si aggiudica: 
+						99.1.2.2.2 Oggetto in vendita al prezzo del bid (v. req. 2.1.1.5 e 2.1.1.4)
+
+				99.1.2.3 Chiusura asta requisiti: 
+						99.1.2.3.1 Bid che si è aggiudicato l'oggetto (se esiste)
+						99.1.2.3.2 Prezzo oggetto in vendtia (v. req. 2.1.1.1)
+				
+			
+	99.2 Da offrire agli utenti:
+        	99.2.1 Calcolare il prezzo di un bid b del post p, come segue: c + r dove:
+            		- c è il prezzo del bid precedente b per il post p (e prezzo base di p se c non è definito)
+            		- r è il rialzo di p (v. req. 2.1.1.2)
+	  	
+			99.2.2 Proporre un nuovo bid per un oggetto: 
+	    			99.2.2.1 In vendita tramite asta
+	    			99.2.2.2 Procedere all'acquisto in modalità ("compralo subito")
+
+	99.3 Ricerca dei post in vendita:
+		99.3.1 organizzare post in modo gerarchico a categorie (categorie principali, seocndo livello..)
+			99.3.1.1 Ricavare sottocategorie da categorie se esistono
+
+	99.4 Calcolo affidabilità: ??
+		
+		
+
+
+
+			
+
+
+
+
+-----------
+
+Per ogni utente, il sistema deve permettere di calcolarne l’affidabilità, che si calcola a partire dai feedback che ha ricevuto 
+per gli oggetti che ha messo in vendita. In particolare, l’affidabilità di un venditore è data dalla media aritmetica m di tutti 
+i feedback che ha ricevuto, diminuita di un fattore che è tanto più grande quanto maggiore è il numero di feedback negativi (ovvero ≤ 2). 
+Tecnicamente, detta z la frazione dei feedback negativi rispetto ai feedback totali, l’affidabilità di un venditore è data da m(1 − z)/5.
+ L’affidabilità è quindi sempre un reale tra 0 e 1 (dato che è pari ad m/5 ∈ [0, 1] se non ci sono feedback negativi 
+ (z = 0), mentre scende verso 0 all’aumentare della percentuale z di questi ultimi).
