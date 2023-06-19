@@ -105,9 +105,6 @@
 
 			
 
-
-
-
 -----------
 
 Per ogni utente, il sistema deve permettere di calcolarne l’affidabilità, che si calcola a partire dai feedback che ha ricevuto 

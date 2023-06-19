@@ -1,0 +1,32 @@
+
+
+1. Impiegato interessa:
+    1.1 Nome
+    1.2 Cognome
+    1.3 Data di nascita
+    1.4 Stiepndio attuale
+    1.5 Dipartimento (v. req. 2)
+
+2. Dipartimento interessa:
+    2.1 Nome
+    2.2 numero di telefono 
+    2.3 data di afferenza Impiegati
+    2.4 Direttore (il direttore è un impiegato dell'azienda v. req. 1.)
+
+
+3. Progetti aziendali
+    3.1 Nome
+    3.2 Budget
+
+    
+4. Funzionalità del Sistema
+
+    4.1 Da offire ad ogni impiegato:
+        4.1.1 Parteciapre ad un numero qualsiasi di progetti
+
+    4.1 rappresentare i progetti aziendali (nei quali sono convolti i diversi impiegati)
+
+
+
+
+
