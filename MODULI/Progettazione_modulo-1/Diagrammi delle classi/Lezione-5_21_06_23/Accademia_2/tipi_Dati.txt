@@ -1,0 +1,8 @@
+
+TIpi di dati:
+
+    MatricolaUniversità: stringa e numero secondo standard universitari
+
+    PosizioneUniversita: {ricercatore, professore, associato, proessore, odinario}
+
+    TipoImpegno = {assenza, istituzionali, progettuali}

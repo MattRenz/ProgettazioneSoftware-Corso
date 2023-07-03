@@ -1,0 +1,41 @@
+
+0. Docenti Universitari interessa
+    0.1 nome
+    0.2 cognome
+    0.3 luogo
+    0.4 data nascita
+    0.5 matricola
+    0.6 posizione universitaria (ricercatore, professore, associato, proessore, odinario)
+    
+1. Progetti di ricerca interessa
+    1.1 nome
+    1.2 acronimo 
+    1.3 data inizio
+    1.4 data fine
+    1.5 docenti che vi partecipano
+    
+        1.1 Progetto composto da molti Work Package (WP) interessa:
+            1.1.1 progetto a cui fa riferimento
+            1.1.2 nome
+            1.1.3 data inizio
+            1.1.4 data fine
+        
+
+x. Funzionalità sistema
+
+    x.1 I Docenti possono registrare impegni tra cui:
+
+        x.1.1 assenza (chiusura univeristaria, malattia, gravidanza etc..)
+        x.1.2 impegni istituzionali (didattica, ricerca, missione etc..)
+        x.1.3 impegni progettuali (ricerca sviluppo, dimostrazione etcc.) 
+
+        x.2 Degli impegni interessa:
+            x.2.1 giorno in cui avvengono
+            x.2.2 durata in ore (tranne per malattia che dura tutto il giorno)
+            x.2.3 tipologia impegno
+            x.2.4 motivazione
+        
+        
+        
+
+
