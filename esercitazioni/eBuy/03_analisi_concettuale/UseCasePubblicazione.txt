@@ -1,0 +1,28 @@
+Specifica use case Pubblicazione
+
+	pubblica_post(desc:stringa, c:Categoria, stato:{nuovo, usato},
+		modalita:{asta, cs},  rialzo: Denaro [0..1], scadenza: Data [0..1] ): ...
+		
+		pre:
+			- modalita = asta se e solo se rialzo è dato
+			- modalità = asta se e solo se scadenza è data
+			
+		post: ...
+
+
+	ultimo_bid(p:PostAsta): Bid [0..1]
+		pre: nessuna			
+		post: 
+			result:Bid tale che:
+				- (result, p): bid_asta
+				- non esiste alcun b:Bid tale che (b,p): bid_asta e b.istante > result.istante
+
+
+	bid_aggiudicatario(p:PostAsta): Bid [0..1]
+		pre: 
+			istante corrente > p.scadenza
+		post: 
+			result = ultimo_bid(p)
+
+
+

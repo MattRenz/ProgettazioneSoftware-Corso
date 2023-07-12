@@ -1,0 +1,9 @@
+Specifica use case Registrazione
+
+	crea_nuovo_utente(nome:stringa): Utente
+		pre: ...
+		post: 
+			Viene creato e restituito un nuovo oggetto result:Utente con:
+				result.nome = nome
+				result.registrazione = data corrente 
+			

@@ -1,0 +1,10 @@
+Specifica dei tipi di dato
+
+	Tipo Denaro: record(
+		valuta: stringa secondo standard
+		importo: reale >= 0
+	)
+	
+	Tipo URL: stringa secondo standard
+
+	Tipo Popolarità = {bassa, media, alta}

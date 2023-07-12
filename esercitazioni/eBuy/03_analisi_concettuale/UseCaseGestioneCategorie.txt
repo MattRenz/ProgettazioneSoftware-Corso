@@ -1,0 +1,6 @@
+Specifica use case GestioneCategorie
+
+	crea_nuova_categoria(nome:stringa): Categoria
+		pre: ...
+		post: viene creato e restituito result:Categoria con:
+			result.nome = nome

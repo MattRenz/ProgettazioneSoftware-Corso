@@ -17,9 +17,9 @@
 			2.1.1.4 Bid (v. req. 3)
 			2.1.1.5 Oggetto in vendita
 
-    2.1.2 Compralo subito. Dei post di tipo "compralo subito" interessa:
-      		2.1.2.1 Prezzo di vendita 
-      		2.1.2.2 Eventuale utente acquirente
+			2.1.2 Compralo subito. Dei post di tipo "compralo subito" interessa:
+					2.1.2.1 Prezzo di vendita 
+					2.1.2.2 Eventuale utente acquirente // (??) non richiesto nei reqisiti
 
   	2.2 Descrizione
   	2.3 Categoria
@@ -63,6 +63,7 @@
 		5.1.1 feedback numerico da 0(non soddisfatto) a 5(molto soddisfatto)
 		5.1.2 commento testuale
 	
+
 
 99. Funzionalità del sistema
 

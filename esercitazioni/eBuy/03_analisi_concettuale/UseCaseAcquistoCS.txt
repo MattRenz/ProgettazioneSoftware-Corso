@@ -1,0 +1,11 @@
+Specifica use case AcquistoCS
+
+	acquista(p:PostCS)
+		pre: 
+			- Sia u:UtentePrivato l'oggetto associato all'attore
+				che invoca l'operazione
+			- non deve esistere il link (p,u):venditore
+			- non deve esistere alcun link di assoc. acquirente 
+				che coinvolgere p
+		post: 		
+			Viene creato il link (p,u):acquirente

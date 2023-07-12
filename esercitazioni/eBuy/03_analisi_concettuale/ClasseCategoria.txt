@@ -1,0 +1,10 @@
+Specifica classe Categoria
+
+
+
+== Vincoli esterni ==
+
+[V.Categoria.no_cicli]
+I link dell'associazione sotto_super_cat non formano cicli.
+
+

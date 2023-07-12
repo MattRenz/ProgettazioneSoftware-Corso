@@ -1,0 +1,8 @@
+Specifica use-case NavigazioneCategorie
+
+
+	sottocategorie(c:Categoria) : Categoria [0..*]
+		pre: nessuna
+		post:
+			result è l'insieme degli oggetti c':Categoria tali che:
+				(super_cat:c, sotto_cat:c'):sotto_super_cat
