@@ -6,22 +6,4 @@ popolarità(v: VenditoreProfessionale) : Popolarità
 	pre: nessuna
 
 	post: 
-
-		Sia N il numero di utenti che ha effettuato bid per o acquistato post venduti da v negli ultimi 12 mesi, ovvero:
-
-			Sia U l'insieme degli oggetti 'u' di classe UtentePrivato tali che:
-				- esistono i link:
-					- (u, b):bidder, per un qualche b:Bid tale che b.istante >= "adesso - 1 anno"
-					- (b, p): bid_asta, per un qualche p:PostAsta
-					- (v, p): venditore
-
-				- oppure esistono i link:
-					- (u, p): acquirente, per un qualche p:PostCS tale che:
-						(u,p).istante >= "adesso - 1 anno"					
-					- (v, p): venditore
-
-			
-			result è pari a:
-				bassa se |U| < 50 
-				media se 50 <= |U| <= 300
-				alta  se |U| > 300
+		result = v.popolarità()

@@ -1,0 +1,23 @@
+Specifica classe Utente
+
+	affidabilita(): reale in [0,1]
+		pre:
+			// this ha almeno un feedback
+			esiste p:PostConFeedback tale che (this,p):venditore
+
+		post:
+			// m è il voto medio dei feedback ricevuti da this
+			Sia P l'insieme degli oggetti p:PostConFeedback 
+					t.c. (this, p):venditore, ovvero:
+
+				P = { p | p:PostConFeedback and (this,p):venditore }
+
+			// Sia m il valor medio dei valori dell'attributo voto degli oggetti in p in P
+				m = SUM_{p in P} (p.voto) / |P|
+
+			// Sia Pneg il sottoinsieme di P dei post p t.c. p.voto <= 2
+				Pneg = { p | p in P and p.voto <= 2 }
+
+			z = |Pneg| / |P|
+
+			result = m*(1-z)/5

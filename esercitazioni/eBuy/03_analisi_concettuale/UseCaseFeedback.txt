@@ -1,0 +1,22 @@
+Specifica use-case Feedback
+
+esprimi_feedback(p:Post, v:0..5, g:stringa [0..1])
+	pre: 
+		// p è venduto:
+		se p:PostAsta, allora 
+			sia u = GestioneBid.utente_aggiudicatario(p)
+		altrimenti (ovvero p:PostCS), allora
+			sia u = AcquistoCS.utente_acquirente(p)
+
+		u è l'istanza di UtentePrivato associata all'attore che ha invocato l'operazione
+
+		// p non è di classe PostConFeedback
+
+		
+	post:
+		- p diventa di classe PostConFeedback
+		- p.voto = v
+		- p.giudizio = g
+
+
+

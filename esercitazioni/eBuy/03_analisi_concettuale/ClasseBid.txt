@@ -1,0 +1,18 @@
+Specifica classe Bid
+
+	valore(): Denaro
+		pre: nessuna
+		post:
+			- sia p:PostAsta tale che (this,p):bid_asta
+			- sia N il numero di istanze b':Bid tali che:
+				- (b', p):bid_asta
+				- b'.istante <= b.istante
+			- result = p.prezzo + p.rialzo * (N-1)
+
+
+	
+
+
+	
+
+

@@ -1,0 +1,19 @@
+Specifica classe PostAsta
+
+	asta_scaduta(): booleano
+		pre: nessuna 
+		post:
+			result = ( this.scadenza <= istante corrente )
+
+
+	utente_aggiudicatario(): Utente [0..1]
+		pre: nessuna
+		post:
+			se this.asta_scaduta() = TRUE:
+				se esiste b:Bid tale che:
+					- (b,p):bid_asta
+					- non esiste alcun b':Bid tale che:
+						- (b',p):bid_asta
+						- b'.istante > b.istante
+				allora result è tale che:
+					(result,b):bidder

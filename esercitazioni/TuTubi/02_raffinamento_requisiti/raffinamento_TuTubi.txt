@@ -1,0 +1,128 @@
+
+TuTUbi: portale Web per la pubblicazione e condivisione
+di file video da parte degli utenti registrati.
+
+
+1. Utenti interessa: 
+    1.1 Nome
+    1.2 Data iscrizione 
+
+
+2. Video
+
+    2.1 Titolo
+    2.2 Durata
+    2.3 Descrizione
+    2.4 File nel quale è codificato
+    2.5 Categoria interessa: // la Categoria è unica
+        2.5.1 Nome categoria
+    2.6 Tag interessa: // Insieme di parole chiavi che ne descrivano il contenuto\
+        2.6.1 Nome tag
+    2.7 Valutazione (facoltativa)
+        2.7.1 valore valutazione (0 -pessimo- a 5 -ottimo-)
+
+
+3. Cronologia
+    3.1 Sequenza video visionati (da ogni singolo utente)
+        3.1.1 Data e ora del video visionato
+    3.2 Numero di visualizzazioni video
+
+
+4. Playlist
+    4.1 Nome
+    4.2 Data di creazione
+
+
+5. Ricerca interessa:
+    5.1 Categoria
+    5.2 Insieme di tag
+    5.3 Valutazione v (tra 0 e 5)
+ 
+ 
+6. Censura interessa:
+    6.1 Motivo
+
+
+x. Funzionalità Sistema:
+
+    x.1 Memorizzazione dei video
+
+    x.2 Gli Utenti possono:
+
+        x.2.1 Iscriversi
+
+        x.2.2 Visualizzare video 
+
+            x.2.1.1 Esprimere valutazioni 
+                x.2.1.1.1 Data e ora
+
+            x.2.1.2 Esprimere commenti
+                x.1.1.2.1 Data e ora
+
+        x.2.3 Creare Playlist personali
+            x.2.2.1 Playlist pubbliche
+            x.2.2.1 Playlist private
+
+        x.2.4 Visualizzare Playlist pubbliche di un altro utente
+       
+        x.2.5 Ottenere le Playlist pubbliche di un altro utente
+
+        x.2.6 Ricerca di un video dato: 
+            x.2.6.1 Una Categoria
+                x.2.6.1.1 Ricerca i video con il maggior numero di video in risposta 
+                // al fine di isolare le discussioni più animate tra gli utenti
+            x.2.6.2 Un insieme di Tag
+            x.2.6.3 Un intero v (tra 0 e 5) // v = valutazione 
+
+            // Restiuisce tutti i video disponibili:
+            //   - di quella categoria, 
+            //   - che posseggono alemno un tag, 
+            //   - con valutazione media di almeno v
+            //   (se un video non ha nessuna valutazione deve essere restituito comunque)
+
+    x.3 Gli utenti registrati possono:
+        
+        x.3.1 Pubblicare video
+            x.3.1 Segnalare che si tratta di una risposta ad un video già esistente
+
+        x.3.2 Visualizzare i video disponibili
+            x.3.2.1 Esprimere valutazioni
+                x.3.2.1.1 Data e ora 
+
+            x.3.2.2 Esprimere commenti
+                x.3.2.2.1 Data e ora 
+
+        x.3.3 Creare Playlist
+            x.3.3.1 Playlist pubbliche
+            x.3.3.2 Playlist private
+        
+        x.3.4 Visualizzare Playlist pubbliche
+        
+        x.3.5 Ottenere le Playlist pubbliche di un altro utente
+
+        x.3.6 Modificare le sue Playlist
+
+        x.3.7 Ricerca di un video dato: 
+            x.3.7.1 Una categoria
+                x.3.7.1.1 Ricerca i video con il maggior numero di video in risposta 
+                // al fine di isolare le discussioni più animate tra gli utenti
+            x.3.7.2 Un insieme di tag 
+            x.3.7.3 Un intero v (tra 0 e 5) // v = valutazione  
+            
+            // Restiuisce tutti i video disponibili:
+            //   - di quella categoria, 
+            //   - che posseggono alemno un tag, 
+            //   - con valutazione media di almeno v
+            //   (se un video non ha nessuna valutazione deve essere restituito comunque)
+
+    x.4 La redazione può:
+        x.4.1 Censuare un video (varie motivazioni: Copytiht, osceno, ecc..)
+            x.4.1.1 Un video censurato: 
+                x.4.1.1.1 Non può essere visionato
+                x.4.1.1.2 Non può essere votato
+                x.4.1.1.3 Non può essere commentato
+                x.4.1.1.4 Non può essere aggiunto a nessuna Playlist
+                x.4.1.1.5 Non può essere restituito come risultato di una ricerca
+                x.4.1.1.6 Non può tornare visibile
+
+        x.4.2 Mantenere il motivo di una censua di un video

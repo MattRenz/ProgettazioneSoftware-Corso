@@ -1,0 +1,8 @@
+Specifica use-case Affidabilità
+
+	affidabilita(u:Utente): Affidabilita
+		pre: esiste p:PostConFeedback tale che (u,p):venditore
+
+		post:
+			result = u.affidabilita()
+

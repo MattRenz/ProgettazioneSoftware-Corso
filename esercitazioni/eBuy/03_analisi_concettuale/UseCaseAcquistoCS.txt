@@ -9,3 +9,10 @@ Specifica use case AcquistoCS
 				che coinvolgere p
 		post: 		
 			Viene creato il link (p,u):acquirente
+
+
+	utente_acquirente(p:PostCS): Utente [0..1]
+		pre: nessuna
+		post: 
+			Se esiste un link (p,u):acqurente, allora
+				result = u
