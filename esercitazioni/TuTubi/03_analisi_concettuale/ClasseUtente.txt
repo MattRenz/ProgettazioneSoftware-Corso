@@ -1,0 +1,13 @@
+Specifica classe Utente
+
+
+	playlist_pubbliche(): Playlist [0..*]
+		pre: -
+
+		post:
+
+			result è l'insieme degli oggetti p:PlaylistPubblica tali che:
+				(this,p):ut_playlist, ovvero:
+
+			result = { p:PlaylistPubblica  |  (this,p): ut_playlist }
+

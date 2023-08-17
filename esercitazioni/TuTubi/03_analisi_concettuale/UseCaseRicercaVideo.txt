@@ -1,0 +1,11 @@
+Specifica use case RicercaVideo
+
+	ricerca(c:Categoria, T:Tag [0..*], v:1..5) : Video [0..*]
+		pre: nessuna
+
+		post:
+			result è l'insieme degli oggetti vid:Video tali che:
+				- (vid,c):video_cat
+				- se T non è vuoto, allora esiste t:T tale che (vid,t):video_tag
+				- se vid.valutazione_media() è definito e pari a x, allora x >= v.
+

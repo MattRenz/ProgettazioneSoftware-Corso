@@ -1,0 +1,26 @@
+Specifica use case Pubblica
+
+
+	nuovo_video(t:stringa, f:FileVideo, orig:Video [0..1]) : Video
+
+		pre:
+			Sia u:Utente l'istanza della classe Utente
+			associata all'attore che ha invocato l'operazione.
+
+			Se esiste p:ParametroSistema t.c. p.nome = "MAX_DURATA_VIDEO":
+				allora deve essere f.durata_sec() <= p.valore
+
+			Non deve esistere il link (u, orig):autore.
+
+		post: 
+			
+			Viene creato e restituito 
+				result:Video tale che:
+					result.titolo = t
+					result.file = f
+
+			Se l'argomento orig:Video è definito:
+				viene creato il link 
+					(risposta:result, originale:orig):in_risposta_a
+
+			Viene creato il link (u,result):autore

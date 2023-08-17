@@ -1,0 +1,31 @@
+Specifica classe Video
+
+	durata_sec(): intero >= 0
+		pre: -
+		post: result = this.file.durata()
+
+	n_visualizzazioni(): intero >= 0
+		pre: -
+		post:
+			result è il numero degli oggetti v:Visualizzazione
+			tali che (this, v):vis_video
+
+			result = |{ v:Visualizzazione  |  (this, v):vis_video }|
+
+	valutazione_media(): VotoMedio
+		pre: 
+			Esiste un link (u,this):valutazione (per un qualche u:Utente).
+
+		post:
+			result è il valor medio delle valutazioni di this.
+			
+			O meglio, usando i nomi dei costrutti del diagramma:
+			result è il valor medio della collezione dei valori dell'attributo 'voto' dei link di associazione 'valutazione' che coinvolgono this.
+
+			Formalmente:
+
+			Sia V = { u,vo | (u,this):valutazione and 
+							 vo = (u, this).voto
+					}.
+
+			result = (SUM_{(u,vo):V} vo) / |V|

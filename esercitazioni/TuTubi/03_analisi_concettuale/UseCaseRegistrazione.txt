@@ -1,0 +1,11 @@
+Specifica use case Registrazione
+
+	nuovo_utente(n:stringa) : Utente
+		pre: 
+			non esiste u:Utente con u.nome_utente = n
+
+		post: 
+			viene creato e restituito un nuovo oggetto 
+			result:Utente con:
+				result.nome_utente = n
+				result.iscrizione = istante corrente

@@ -1,0 +1,21 @@
+Specifica use-case Commento:
+
+    commento_video(video:Video, istante: dataora):
+
+        pre: 
+
+            Sia u:Utente l'istanza della classe Utente
+			associata all'attore che ha invocato l'operazione.
+
+
+            // L'utente deve aver visualizzato il video per commentarlo
+            Deve esistere vis:Visualizzazione t.c.
+                - (Utente, vis): cronologia
+                - (vis, video): vis_video
+                - vis.istante < istante corrente
+
+        post: 
+
+            // L'utente può esprimere più commenti per lo stesso video
+            Viene creato il link (Utente, vid): commento con: 
+                (Utente, vid).istante = istante

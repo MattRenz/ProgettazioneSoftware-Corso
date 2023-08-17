@@ -84,6 +84,7 @@ x. Funzionalità Sistema:
         
         x.3.1 Pubblicare video
             x.3.1 Segnalare che si tratta di una risposta ad un video già esistente
+                x.3.1.1 Mantenimento informazione 
 
         x.3.2 Visualizzare i video disponibili
             x.3.2.1 Esprimere valutazioni

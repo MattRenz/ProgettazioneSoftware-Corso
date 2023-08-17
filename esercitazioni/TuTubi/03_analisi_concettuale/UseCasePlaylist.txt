@@ -1,0 +1,38 @@
+Specifica use case Playlist
+
+	nuova_playlist(n:stringa, t:{Pubblica, Privata}) : Playlist
+		pre:
+			Sia u:Utente l'istanza della classe Utente
+			associata all'attore che ha invocato l'operazione.
+
+			Non esiste p:Playlist tale che:
+				p.nome = n
+				(u, p): ut_playlist
+
+		post:
+			Viene creato e restituito result:Playlist tale che:
+				result.nome = n
+				result.creazione = istante corrente
+
+			Se t = pubblica allora result è di classe più specifica PlaylistPubblica
+			Altrimenti, result è di classe più specifica PlaylistPrivata.
+
+			Viene creato il link (u, result):ut_playlist
+
+	aggiungi_video(p:Playlist, v:Video)
+		pre:
+			Sia u:Utente l'istanza della classe Utente
+			associata all'attore che ha invocato l'operazione.
+
+			Deve essere (u,p): ut_playlist
+
+			Non esiste il link (p,v): video_in_playlist
+
+		post:
+			Viene creato il link (p,v): video_in_playlist in ultima posizione.
+
+	playlist_pubbliche(u:Utente): Playlist [0..*]
+		pre: -
+
+		post:
+			result = u.playlist_pubbliche()

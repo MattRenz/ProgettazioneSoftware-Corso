@@ -1,0 +1,18 @@
+Specifica dei tipi di dato
+
+
+VotoMedio: reale in [1, 5]
+
+Specifica Tipo FileVideo:
+Una istanza di questo tipo codifica un file video
+
+Operazioni del tipo:
+
+durata_sec(): intero >= 0
+	pre: nessuna
+	post: 
+		result è la durata in secondi di this (l'istanza di invocazione del tipo di dato)
+
+
+
+

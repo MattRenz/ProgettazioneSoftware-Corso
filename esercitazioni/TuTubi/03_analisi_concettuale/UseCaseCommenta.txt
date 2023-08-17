@@ -1,0 +1,12 @@
+Specifica use-case Commenta
+
+	nuovo_commento(vis:Visualizzazione, t:stringa): Commento
+		pre: 
+			vis.istante < istante corrente
+
+		post:
+			viene creata e restituita una nuova istanza result:Commento tale che:
+				- result.istante = istante corrente
+				- result.testo = t
+				- (result, vis):commento_vis
+

@@ -1,0 +1,14 @@
+Specifica use case Configura
+
+	assegna_parametro(n:stringa, v:reale)
+		pre:
+			nessuna
+
+		post:
+
+			se esiste p:ParametroSistema t.c. p.nome = n:
+				p.valore = v
+			altrimenti:
+				crea p:ParametroSistema t.c. 
+					p.nome = n
+					p.valore = v

@@ -1,0 +1,18 @@
+Specifica use-case Valuta
+
+	valuta_video(vid:Video, vo:1..5)
+
+		pre: 
+			Sia u:Utente l'istanza della classe Utente
+			associata all'attore che ha invocato l'operazione.
+
+			Non deve esistere il link (u,vid):valutazione
+
+			Deve esistere vis:Visualizzazione t.c.
+				- (u, vis): cronolgia
+				- (vis, vid): vis_video
+				- vis.istante < istante corrente
+
+		post:
+			Viene creato il link (u, vid):valutazione con
+				(u,vid).voto = vo
